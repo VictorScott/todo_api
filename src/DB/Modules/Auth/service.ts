@@ -15,6 +15,7 @@ interface LoginPayload {
 }
 
 export const authService = {
+
     register: async (
         payload: RegisterPayload
     ) => {
@@ -46,12 +47,15 @@ export const authService = {
             { expiresIn: appConfig.jwt.refreshttl }
         );
 
+        const safeUser = user.get({ plain: true }) as any;
+        delete safeUser.password;
+
         return {
             success: true,
             code: 201,
             message: "User registered successfully",
             data: {
-                user,
+                user: safeUser,
                 accessToken,
                 refreshToken,
             },
@@ -95,12 +99,15 @@ export const authService = {
             { expiresIn: appConfig.jwt.refreshttl }
         );
 
+        const safeUser = user.get({ plain: true }) as any;
+        delete safeUser.password;
+
         return {
             success: true,
             code: 200,
             message: "Login successful",
             data: {
-                user,
+                user: safeUser,
                 accessToken,
                 refreshToken,
             },
