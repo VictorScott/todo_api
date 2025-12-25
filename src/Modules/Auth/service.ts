@@ -1,7 +1,7 @@
 import { User } from "@Models/User";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import appConfig from "../../../config";
+import appConfig from "../../config";
 
 interface RegisterPayload {
     name: string;

@@ -1,6 +1,6 @@
 import { Router } from "express";
-import authRouter from "@DB/Modules/Auth/routes";
-import todoRouter from "@DB/Modules/Todo/routes";
+import authRouter from "@Modules/Auth/routes";
+import todoRouter from "@Modules/Todo/routes";
 
 const entryRouter = Router();
 

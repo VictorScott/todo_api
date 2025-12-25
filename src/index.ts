@@ -3,7 +3,7 @@ import express, { Express, Request, Response, NextFunction } from "express";
 import cors from "cors";
 import db from "./DB/db";
 import appConfig from "./config";
-import entryRouter from "@DB/Modules/routes";
+import entryRouter from "./Modules/routes";
 
 const app: Express = express();
 

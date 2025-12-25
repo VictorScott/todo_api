@@ -1,7 +1,7 @@
 import { Router } from "express";
-import {loginSchema, registerSchema} from "@DB/Modules/Auth/schema";
-import validateRequest from "@DB/Middlewares/validation";
-import {login, refreshToken, register} from "@DB/Modules/Auth/controller";
+import {loginSchema, registerSchema} from "@Modules/Auth/schema";
+import validateRequest from "../../Middlewares/validation";
+import {login, refreshToken, register} from "@Modules/Auth/controller";
 
 const authRouter = Router();
 

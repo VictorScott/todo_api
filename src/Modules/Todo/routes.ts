@@ -7,9 +7,9 @@ import {
     completeTodo,
     deleteTodo, getTodoList,
 } from "./controller";
-import {createTodoSchema, listTodoSchema, updateTodoSchema} from "@DB/Modules/Todo/schema";
-import validateRequest from "@DB/Middlewares/validation";
-import authenticate from "@DB/Middlewares/auth";
+import {createTodoSchema, listTodoSchema, updateTodoSchema} from "@Modules/Todo/schema";
+import validateRequest from "../../Middlewares/validation";
+import authenticate from "../../Middlewares/auth";
 
 const todoRouter = Router();
 

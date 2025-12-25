@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from "express";
 import jwt from "jsonwebtoken";
 import { User } from "@Models/User";
-import appConfig from "../../config";
+import appConfig from "../config";
 
 interface JwtPayload {
     id: number;
